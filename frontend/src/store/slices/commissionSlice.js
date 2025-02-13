@@ -24,7 +24,7 @@ export const postCommissionProof = (data) => async (dispatch) => {
   dispatch(commissionSlice.actions.postCommissionProofRequest());
   try {
     const response = await axios.post(
-      "https://prime-bid-qkru.onrender.com/commission/proof",
+      "http://localhost:5000/api/v1/commission/proof",
       data,
       {
         withCredentials: true,
