@@ -91,7 +91,7 @@ export const register = (data) => async (dispatch) => {
   dispatch(userSlice.actions.registerRequest());
   try {
     const response = await axios.post(
-      "https://prime-bid-qkru.onrender.com/api/v1/user/register",
+      "https://prime-bid-qkru.onrender.com/user/register",
       data,
       {
         withCredentials: true,
@@ -112,7 +112,7 @@ export const login = (data) => async (dispatch) => {
   dispatch(userSlice.actions.loginRequest());
   try {
     const response = await axios.post(
-      "https://prime-bid-qkru.onrender.com/api/v1/user/login",
+      "https://prime-bid-qkru.onrender.com/user/login",
       data,
       {
         withCredentials: true,
@@ -132,7 +132,7 @@ export const login = (data) => async (dispatch) => {
 export const logout = () => async (dispatch) => {
   try {
     const response = await axios.get(
-      "https://prime-bid-qkru.onrender.com/api/v1/user/logout",
+      "https://prime-bid-qkru.onrender.com/user/logout",
       { withCredentials: true }
     );
     dispatch(userSlice.actions.logoutSuccess());
@@ -149,7 +149,7 @@ export const fetchUser = () => async (dispatch) => {
   dispatch(userSlice.actions.fetchUserRequest());
   try {
     const response = await axios.get(
-      "https://prime-bid-qkru.onrender.com/api/v1/user/me",
+      "https://prime-bid-qkru.onrender.com/user/me",
       {
         withCredentials: true,
       }
@@ -167,7 +167,7 @@ export const fetchLeaderboard = () => async (dispatch) => {
   dispatch(userSlice.actions.fetchLeaderboardRequest());
   try {
     const response = await axios.get(
-      "https://prime-bid-qkru.onrender.com/api/v1/user/leaderboard",
+      "https://prime-bid-qkru.onrender.com/user/leaderboard",
       {
         withCredentials: true,
       }

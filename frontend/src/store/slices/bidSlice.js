@@ -25,7 +25,7 @@ export const placeBid = (id, data) => async (dispatch) => {
   dispatch(bidSlice.actions.bidRequest());
   try {
     const response = await axios.post(
-      `https://prime-bid-qkru.onrender.com/api/v1/bid/place/${id}`,
+      `https://prime-bid-qkru.onrender.com/bid/place/${id}`,
       data,
       {
         withCredentials: true,
